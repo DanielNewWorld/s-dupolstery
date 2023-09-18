@@ -12,7 +12,7 @@ const firmReducer = (state = initialState, action) => {
         case TOGGLE_IS_MOBILE:
             return {
                 ...state,
-                isMobile: action.isMobile
+                isMobile: window.innerWidth <= 768
             }
 
         default:

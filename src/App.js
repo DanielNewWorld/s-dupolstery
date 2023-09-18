@@ -1,38 +1,54 @@
 import './App.css';
-import React from 'react';
+import React, {Component} from 'react';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Carpet from './components/Services/Carpet/Carpet';
 import MarineUpholstery from './components/Services/MarineUpholstery/MarineUpholstery';
 import Contact from './components/Contact/Contact';
 import FooterContainer from './components/Footer/FooterContainer';
 import AboutUs from './components/AboutUs/AboutUs';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ImageSliderContainer from './components/ImageSlider/ImageSliderContainer';
 import UsersContainer from "./components/Users/UserContainer";
 import Greetings from "./components/Greetings/Greetings";
 import Clock from "./components/Greetings/Clock";
 import Login from "./components/Login/Login";
+import {compose} from "redux";
+import {connect} from "react-redux";
+import Preloader from "./components/Common/Preloader/Preloader";
 
-function App() {
+class App extends Component {
+  componentDidMount() {
+    //this.props.props.initializeApp();
+  }
 
-  return (
-    <BrowserRouter>
-      <div className='gridApp' id="home">
-        <HeaderContainer />
-        <div className='services' id='services'>
-          <ImageSliderContainer />
+  render() {
+    // if (!this.props.initialized) {
+    //   return <Preloader/>
+    // }
+
+    return (
+        <div className='gridApp' id="home">
+          <HeaderContainer/>
+          <div className='services' id='services'>
+            <ImageSliderContainer/>
+          </div>
+          <AboutUs/>
+          <Contact/>
+          <FooterContainer/>
+          <Login/>
+          <UsersContainer/>
         </div>
-        <AboutUs />
-        <Contact />
-        <FooterContainer />
-        <Login />
-        <UsersContainer/>
-      </div>
-    </BrowserRouter>
-  );
+    );
+  }
 }
 
+const mapStateToProps = (state) => ({
+    //initialized: state.app.initialized
+})
+
 export default App;
+//compose(
+    //withRouter,
+    //connect(mapStateToProps, {initializeApp}))(App);
 
 //<Routes>
 //<Route path='/marineupholstery' render={() => <MarineUpholstery/>} />
