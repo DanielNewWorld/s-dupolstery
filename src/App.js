@@ -12,8 +12,10 @@ import Greetings from "./components/Greetings/Greetings";
 import Clock from "./components/Greetings/Clock";
 import Login from "./components/Login/Login";
 import {compose} from "redux";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import Preloader from "./components/Common/Preloader/Preloader";
+import store from "./redux/redux.store";
+import {BrowserRouter} from "react-router-dom";
 
 class App extends Component {
   componentDidMount() {
@@ -45,7 +47,8 @@ const mapStateToProps = (state) => ({
     //initialized: state.app.initialized
 })
 
-export default App;
+//export default App;
+
 //compose(
     //withRouter,
     //connect(mapStateToProps, {initializeApp}))(App);
@@ -57,3 +60,15 @@ export default App;
 
 //<MarineUpholstery data={props.state.homeServicesPage}/>    
 //<ImageSlider data={props.state.homeServicesPage} dispatch={props.dispatch} />
+
+let AppContainer = App;
+
+// const SamuraiJSApp = (props) => {
+//     <BrowserRouter>
+//         <Provider store={store}>
+//             <App />
+//         </Provider>
+//     </BrowserRouter>
+// }
+
+export default App;
