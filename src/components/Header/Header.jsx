@@ -1,10 +1,9 @@
 import React from 'react';
 import styleCSS from './Header.module.css';
 import Menu from '../../components/Menu/Menu';
+import logo from '../../images/logo.jpg';
 
 const Header = (props) => {
-    // Проверяем ширину окна для определения типа устройства
-    //const isMobile = window.innerWidth <= 768; // Значение ширины для определения мобильного устройства
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -16,7 +15,7 @@ const Header = (props) => {
             <div className={styleCSS.gridHeader}>
 
                 <div className={styleCSS.logo}>
-                    <img src="images/logo.jpg" className={styleCSS.logo} />
+                    <img src={logo} className={styleCSS.logo} />
                 </div>
 
                 <div className={styleCSS.nameFirma}>

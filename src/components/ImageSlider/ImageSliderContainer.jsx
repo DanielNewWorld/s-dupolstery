@@ -14,6 +14,7 @@ let mapDispatchToProps = (dispatch) => {
   }
 }
 
-const ImageSliderContainer = connect(mapStateToProps, mapDispatchToProps)(ImageSlider);
+const ImageSliderContainer = connect(mapStateToProps, mapDispatchToProps)
+(ImageSlider);
 
 export default ImageSliderContainer;

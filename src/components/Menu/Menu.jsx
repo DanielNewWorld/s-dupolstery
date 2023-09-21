@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styleCSS from './Menu.module.css';
+import menuImg from '../../images/menu.png';
 
 const Menu = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Menu = () => {
     return (
         <nav className={styleCSS.menuHeader}>
             <div className={styleCSS.menuIcon} onClick={toggleMenu}>
-                <img src="images/menu.png" className={styleCSS.menuLogo} />
+                <img src={menuImg} className={styleCSS.menuLogo} />
                 <div className={styleCSS.menuLabel}><h3>MENU</h3></div>
                 <div className={styleCSS.iconBar}></div>
                 <div className={styleCSS.iconBar}></div>

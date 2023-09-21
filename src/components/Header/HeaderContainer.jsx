@@ -26,6 +26,7 @@ let mapStateToProps = (state) => {
     }
     }
     
-    const HeaderContainer = connect(mapStateToProps, {toggleIsMobile})(HeaderAPIComponent);
+    const HeaderContainer = connect(mapStateToProps, {toggleIsMobile})
+    (HeaderAPIComponent);
 
 export default HeaderContainer;
