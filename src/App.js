@@ -19,8 +19,17 @@ import {BrowserRouter} from "react-router-dom";
 const UsersContainer = React.lazy(()=> import("./components/Users/UserContainer"));
 
 class App extends Component {
+    catchAllUnhandledErrors = (reason, promiseRejectionEvent) => {
+        alert("Some error occured");
+        console.error(promiseRejectionEvent);
+    }
   componentDidMount() {
     //this.props.props.initializeApp();
+      window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors);
+  }
+
+  componentWillUnmount() {
+        window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors);
   }
 
   render() {
