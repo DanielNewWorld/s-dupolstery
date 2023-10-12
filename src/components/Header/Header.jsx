@@ -40,10 +40,10 @@ const Header = (props) => {
                     (
                     // Компьютер: отображаем меню в строчку
                     <nav className={styleCSS.menuLine}>
-                        <div><a href="" onClick={() => scrollToSection('home')}>HOME</a></div>
-                        <div><a href="" onClick={() => scrollToSection('services')}>SHOP</a></div>
-                        <div><a href="" onClick={() => scrollToSection('about')}>ABOUT US</a></div>
-                        <div><a href="" onClick={() => scrollToSection('contact')}>CONTACT</a></div>
+                        <div><button onClick={() => scrollToSection('home')}>HOME</button></div>
+                        <div><button onClick={() => scrollToSection('services')}>SHOP</button></div>
+                        <div><button onClick={() => scrollToSection('about')}>ABOUT US</button></div>
+                        <div><button onClick={() => scrollToSection('contact')}>CONTACT</button></div>
                     </nav>
                 )}
             </div>
