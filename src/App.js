@@ -1,20 +1,12 @@
 import './App.css';
 import React, {Component, Suspense} from 'react';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Carpet from './components/Services/Carpet/Carpet';
-import MarineUpholstery from './components/Services/MarineUpholstery/MarineUpholstery';
 import Contact from './components/Contact/Contact';
 import FooterContainer from './components/Footer/FooterContainer';
 import AboutUs from './components/AboutUs/AboutUs';
 import ImageSliderContainer from './components/ImageSlider/ImageSliderContainer';
-import Greetings from "./components/Greetings/Greetings";
-import Clock from "./components/Greetings/Clock";
 import Login from "./components/Login/Login";
-import {compose} from "redux";
-import {connect, Provider} from "react-redux";
 import Preloader from "./components/Common/Preloader/Preloader";
-import store from "./redux/redux.store";
-import {BrowserRouter} from "react-router-dom";
 
 const UsersContainer = React.lazy(()=> import("./components/Users/UserContainer"));
 
@@ -55,9 +47,9 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+// const mapStateToProps = (state) => ({
     //initialized: state.app.initialized
-})
+// })
 
 //export default App;
 
@@ -73,7 +65,7 @@ const mapStateToProps = (state) => ({
 //<MarineUpholstery data={props.state.homeServicesPage}/>    
 //<ImageSlider data={props.state.homeServicesPage} dispatch={props.dispatch} />
 
-let AppContainer = App;
+// let AppContainer = App;
 
 // const SamuraiJSApp = (props) => {
 //     <BrowserRouter>

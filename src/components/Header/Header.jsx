@@ -15,7 +15,7 @@ const Header = (props) => {
             <div className={styleCSS.gridHeader}>
 
                 <div className={styleCSS.logo}>
-                    <img src={logo} className={styleCSS.logo} />
+                    <img alt="" src={logo} className={styleCSS.logo} />
                 </div>
 
                 <div className={styleCSS.nameFirma}>
@@ -40,10 +40,10 @@ const Header = (props) => {
                     (
                     // Компьютер: отображаем меню в строчку
                     <nav className={styleCSS.menuLine}>
-                        <div><a onClick={() => scrollToSection('home')}>HOME</a></div>
-                        <div><a onClick={() => scrollToSection('services')}>SHOP</a></div>
-                        <div><a onClick={() => scrollToSection('about')}>ABOUT US</a></div>
-                        <div><a onClick={() => scrollToSection('contact')}>CONTACT</a></div>
+                        <div><a href="" onClick={() => scrollToSection('home')}>HOME</a></div>
+                        <div><a href="" onClick={() => scrollToSection('services')}>SHOP</a></div>
+                        <div><a href="" onClick={() => scrollToSection('about')}>ABOUT US</a></div>
+                        <div><a href="" onClick={() => scrollToSection('contact')}>CONTACT</a></div>
                     </nav>
                 )}
             </div>
@@ -54,8 +54,8 @@ const Header = (props) => {
 
 export default Header;
 
-{/* <img src="images/background_0.jpg" className={styleCSS.imageHeader} />
+/* <img src="images/background_0.jpg" className={styleCSS.imageHeader} />
 
 <div className={styleCSS.textHeader}>
     <h1>{state.name}</h1>
-</div> */}
+</div> */

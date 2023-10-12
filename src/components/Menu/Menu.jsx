@@ -17,7 +17,7 @@ const Menu = () => {
     return (
         <nav className={styleCSS.menuHeader}>
             <div className={styleCSS.menuIcon} onClick={toggleMenu}>
-                <img src={menuImg} className={styleCSS.menuLogo} />
+                <img alt="" src={menuImg} className={styleCSS.menuLogo} />
                 <div className={styleCSS.menuLabel}><h3>MENU</h3></div>
                 <div className={styleCSS.iconBar}></div>
                 <div className={styleCSS.iconBar}></div>

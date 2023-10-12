@@ -5,7 +5,7 @@ const Item = (props) => {
     
     return (
         <div className={styleCSS.item}>
-            <img src={props.imgName} />
+            <img alt="" src={props.imgName} />
             <h3>{props.nameItem}</h3>
         </div>
     );

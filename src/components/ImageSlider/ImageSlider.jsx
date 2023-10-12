@@ -15,7 +15,7 @@ const ImageSlider = (props) => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [props.data.length]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -32,13 +32,15 @@ const ImageSlider = (props) => {
     case 2:
       image = image3;
       break;
+    default:
+      image = image1;
   }
 
   return (
     <section className={styleCSS.gridServiceItem}>
     <div className={styleCSS.serviceItem}>
       {/*<img className={styleCSS.imgItem} src={props.data[currentImage].imgSrc} alt={`Image ${currentImage}`} />*/}
-      <img className={styleCSS.imgItem} src={image} alt={`Image ${currentImage}`} />
+      <img className={styleCSS.imgItem} src={image} alt={`I ${currentImage}`} />
       {<div className={styleCSS.desriptionItem}>
         <div className={styleCSS.desriptionContents}>
           <h2>
